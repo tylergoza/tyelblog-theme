@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+    <h1 class="title">{{ .Title }}</h1>
+    {{ range .Pages.ByPublishDate.Reverse }}
+        <article>
+            <header>
+                <a href="{{ .RelPermalink }}" class="read-more-link" hx-get="{{ .RelPermalink }}" hx-trigger="click" hx-target="main" hx-swap="outerHTML" hx-select="main" hx-push-url="true">
+                    <h2>{{ .Title }}</h2>
+                </a>
+                <aside>
+                    {{ partial "metadata.html" . }}
+                </aside>
+            </header>
+            {{ .Summary }}
+            <a href="{{ .RelPermalink }}" class="read-more-link" hx-get="{{ .RelPermalink }}" hx-trigger="click" hx-target="main" hx-swap="outerHTML" hx-select="main" hx-push-url="true">Read more...</a>
+        </article>
+    {{ end }}
+</main>
+{{ end }}

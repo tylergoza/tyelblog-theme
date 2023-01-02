@@ -1,0 +1,23 @@
+<noscript>
+    <!-- Matomo Image Tracker-->
+    <img src="https://analytics.tyeltech.com/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
+    <!-- End Matomo -->
+</noscript>
+<header>
+    {{ $siteTitle := print .Site.Title }}
+    <h1>{{ $siteTitle }}</h1>
+</header>
+<div id="nav-border" class="container">
+    <nav id="nav" class="nav justify-content-center">
+        <ul>
+            {{ range .Site.Menus.main }}
+            <li>
+                <a class="nav-link" href="{{ .URL }}" hx-get="{{ .URL }}" hx-target="main" hx-swap="outerHTML" hx-select="main" hx-push-url="true">
+                {{ $text := print .Name | safeHTML }}
+                {{ $text }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+</div>

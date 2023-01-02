@@ -1,0 +1,35 @@
+@media screen {
+    body {
+      color: #ffffff;
+      background: #2A2829;
+    }
+    
+    nav {
+      border-bottom: solid 3px #cecece;
+    }
+    
+    a {
+      color: #ffffff;
+    }
+    
+    article aside {
+      color: #909090;
+    }
+    
+    article {
+      border-bottom: solid 3px #cecece;
+    }
+    
+    article header h2 {
+      color: #ffffff;
+    }
+    
+    em {
+      color: #ffffff;
+    }
+  
+    a.external {
+      color: #d1caca;
+    }
+  
+  }

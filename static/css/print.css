@@ -1,0 +1,31 @@
+article a, nav, .no-print {
+    display: none;
+    visibility: hidden;
+  }
+
+  /** Color Settings **/
+  body {
+    color: #333333;
+    background: #ffffff;
+  }
+  nav {
+    border-bottom: solid 3px #cecece;
+  }
+  article aside {
+    color: #909090;
+  }
+  article {
+    border-bottom: solid 3px #cecece;
+  }
+  a {
+    color: #666666;
+  }
+  article header h2 {
+    color: #666666;
+  }
+  em {
+    color: #666666;
+  }
+  #relative-nav {
+    display: none;
+  }
